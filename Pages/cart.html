@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="index" href="./Store.html">
+    <script src="/function.js"></script>
+    <title>SAYA - Cart</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'poppins', sans-serif;
+        font-size: 18px;
+    }
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background: url(/images/bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .header{
+        height: 80px;
+        width: 70%;
+        background-color: goldenrod;
+        border-radius: 3px;
+        margin: 30px 0px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px;
+    }
+    .header .logo img{
+        width: 75px;
+        border-radius: 50%;
+    }
+    .cart{
+        display: flex;
+        background-color: white;
+        justify-content: space-between;
+        align-items: center;
+        padding: 7px 10px;
+        border-radius: 3px;
+        width: 80px;
+    }
+    .fa-solid{
+        color: goldenrod;
+    }
+    .cart p{
+        height: 22px;
+        width: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 22px;
+        background-color: goldenrod;
+        color: white;
+    }
+    .container{
+        display: flex;
+        width: 70%;
+        margin-bottom: 30px;
+        border-radius: 6px;
+        background-color: #eee;
+    }
+    #cartItem{
+        display: flex;
+        flex-direction: column;
+    }
+    .sidebar{
+        width: 95%;
+        border-radius: 6px;
+        background-color: #eee;
+        margin-left: 20px;
+        padding: 15px;
+        text-align:justify;
+    }
+    .head{
+        background-color: goldenrod;
+        border-radius: 3px;
+        height: 40px;
+        padding: 10px;
+        margin-bottom: 20px;
+        color: white;
+        display: flex;
+        align-items: center;
+    }
+    .foot{
+        display: flex;
+        justify-content: space-around;
+        margin: 20px 0px;
+        padding: 10px 0px;
+        border-top: 1px solid #333;
+    }
+    .remove-btn{
+        display: inline;
+        background-color: goldenrod;  
+        color: white;                
+        border: none;
+        border-radius: 5px;           
+        padding: 5px 10px;
+        cursor: pointer;            
+        font-size: 14px;
+        transition: background-color 0.3s ease;
+    }
+    .payment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    background-color: #f8f9fa;
+}
+
+#pay {
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(255, 65, 108, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: pulse 1.5s infinite alternate;
+}
+
+#pay:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(255, 65, 108, 0.7);
+}
+
+#pay:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 5px rgba(255, 65, 108, 0.5);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+}
+#pay a{
+    text-decoration: none;
+    color: white;
+}
+.popup{
+    width: 450px;
+    background: #fff;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    position:absolute;
+    top: 46%;
+    left: 50%;
+    margin: 50px;
+    color: black;
+    transform: translate(-60%,-30%);
+    text-align: center;
+    border: 2px solid black;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out;
+    background: url(/images/background.jpeg);
+}
+.popup h2{
+    margin: 15px;
+}
+.popup a{
+    color: #d45;
+    text-decoration: none;
+    align-items: center;
+    justify-content: left;
+    height: 50px;
+    display: flex;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 23px;
+    margin: 10px;
+}
+.popup a img{
+    width: 100px;
+    text-decoration: none;
+    margin: 40px;
+    height: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out;
+}
+.popup a img:hover{
+    transform: scale(1.2);
+}
+.popup #gpay{
+    background-color: #FFCFCF;
+    transition: transfrom 0.3s ease-in-out;
+    color: black;
+}
+.popup #gpay:hover{ 
+    transform: scale(1.02);
+    opacity: 1;
+}
+.popup #phonepe{
+    background-color: #8D77AB;
+}
+.popup #phonepe:hover{ 
+    transform: scale(1.02);
+}
+.popup #paytm{
+    background-color: #A0E9FF;
+}
+.popup #paytm img{
+    width: 100px;
+    height: 40px;
+}
+.popup #paytm:hover{ 
+    transform: scale(1.02);
+}
+.popup #upi{
+    background-color: #9ED5C5;
+}
+.popup #upi:hover{ 
+    transform: scale(1.02);
+}
+.popup #cash{
+    background-color: #8EC3B0;
+}
+.popup #cash:hover{ 
+    transform: scale(1.02);
+}
+.popup #credit{
+    background-color: #3F3351;
+}
+.popup #credit img{
+    width: 60px;
+    height: 50px;
+    margin-left: 60px;
+}
+.popup #credit:hover{ 
+    transform: scale(1.02);
+}
+
+.popup label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+.popup {
+    width: 450px;
+    background: #fff;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 20px;
+    border: 2px solid black;
+    display: none; /* Initially hidden */
+}
+
+.popup input, .popup textarea {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background: #28a745;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+button:hover {
+    background: #218838;
+}
+
+
+</style>
+<body>
+    <div class="header">
+        <a href="/index.html"><p class="logo"><img src="/images/logo.png" alt=""></p></a>
+        <div class="cart"><i class="fa-solid fa-cart-shopping"></i><p id="count">0</p></div>
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            <div class="head"><p>MyCart</p></div>
+            <div id="cartItem">Your Cart is Empty</div>
+            <div class="foot">
+                <h3>Total</h3>
+                <h2 id="total">₹ 0.00</h2>
+            </div>
+        </div>
+    </div>
+    <div id="payment">
+        <button id="pay">
+            Click to Pay </button>
+    </div>
+    <form id="Pop">
+        <div class="popup" id="popup">
+
+            <!-- Step 1: Mobile Number -->
+            <div id="step1">
+                <h2>Enter Your Mobile Number</h2>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                <button id="nextToStep2">Next</button>
+            </div>
+        
+            <!-- Step 2: Address -->
+            <div id="step2" style="display: none;">
+                <h2>Enter Your Address</h2>
+                <textarea id="address" name="address" placeholder="Enter your delivery address" required></textarea>
+                <button id="backToStep1">Back</button>
+                <button id="nextToStep3">Next</button>
+            </div>
+        
+            <!-- Step 3: Payment Options -->
+            <div id="step3" style="display:none">
+                <h2>Select Your Payment Method</h2>
+                <a href="#" id="gpay"><img src="/images/cdnlogo.com_google-pay-2020.svg" alt=""><h2>Gpay</h2></a>
+                <a href="#" id="phonepe"><img src="/images/phonepe-icon.svg" alt=""><h2>Phonepe</h2></a>
+                <a href="#" id="paytm"><img src="/images/1218169_paytm_icon.svg" alt=""><h2>Paytm</h2></a>
+                <a href="#" id="upi"><img src="/images/bhim-upi-icon.svg" alt=""><h2>UPI</h2></a>
+                <a href="#" id="cash"><img src="/images/indian-rupee-notes-color-icon.svg" alt=""><h2>Cash On Delivery</h2></a>
+                <a href="/Pages/payment.html" id="credit"><img src="/images/credit-card.png" alt=""><h2>Credit Card</h2></a>
+                <button id="backToStep2">Back</button>
+                <button id="cancel">Cancel</button>
+            </div>
+        
+        </div>        
+        
+</form>
+</body>
+<script>
+  // Select button and popup
+  const clickToPayButton = document.getElementById('pay');
+  const popupForm = document.querySelector('.popup');
+
+  // Initially hide the popup
+  popupForm.style.display = 'none';
+
+  // Add click event listener to the button
+  clickToPayButton.addEventListener('click', (e) => {
+    e.preventDefault(); // Prevent default anchor behavior
+    popupForm.style.display = 'flex'; // Show the popup
+  });
+
+  // Optional: Close popup when clicking outside of it
+  document.addEventListener('click', (event) => {
+    if (popupForm.style.display === 'flex' && !popupForm.contains(event.target) && event.target !== clickToPayButton) {
+      popupForm.style.display = 'none'; // Hide the popup
+    }
+  });
+
+// Get elements
+const popup = document.getElementById('popup');
+const clickToPay = document.getElementById('pay');
+
+const step1 = document.getElementById('step1');
+const step2 = document.getElementById('step2');
+const step3 = document.getElementById('step3');
+
+const nextToStep2 = document.getElementById('nextToStep2');
+const backToStep1 = document.getElementById('backToStep1');
+const nextToStep3 = document.getElementById('nextToStep3');
+const backToStep2 = document.getElementById('backToStep2');
+
+const phoneInput = document.getElementById('phone');
+const addressInput = document.getElementById('address');
+
+// Show popup when "Click to Pay" is clicked
+clickToPay.addEventListener('click', (e) => {
+    e.preventDefault();
+    popup.style.display = 'block';  // Ensure popup stays visible
+    step1.style.display = 'block';
+    step2.style.display = 'none';
+    step3.style.display = 'none';
+});
+
+// Move to Step 2 (Address)
+nextToStep2.addEventListener('click', (e) => {
+    e.preventDefault();  // Prevent any unintended form submission
+    if (phoneInput.value.trim() === "") {
+        alert("Please enter your mobile number.");
+        return;
+    }
+    step1.style.display = 'none';
+    step2.style.display = 'block';
+});
+
+// Move back to Step 1 (Phone)
+backToStep1.addEventListener('click', (e) => {
+    e.preventDefault();
+    step2.style.display = 'none';
+    step1.style.display = 'block';
+});
+
+// Move to Step 3 (Payment Options)
+nextToStep3.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (addressInput.value.trim() === "") {
+        alert("Please enter your address.");
+        return;
+    }
+    step2.style.display = 'none';
+    step3.style.display = 'block';
+});
+
+// Move back to Step 2 (Address)
+backToStep2.addEventListener('click', (e) => {
+    e.preventDefault();
+    step3.style.display = 'none';
+    step2.style.display = 'block';
+});
+
+// Prevent popup from closing when clicking inside it
+popup.addEventListener('click', (event) => {
+    event.stopPropagation();
+});
+
+
+</script>
+</html>

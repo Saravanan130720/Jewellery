@@ -1,0 +1,610 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: url(./images/bg.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+    margin: 0;
+    display: grid;
+    background-repeat:round;
+    flex-wrap: wrap;
+}
+.logo img{
+    margin: 20px;
+    height: 100px;
+    border-radius: 100%;
+    position:relative;
+    left: 45%;
+    padding: 5px;
+}
+.logo img:hover{
+    background-color: chartreuse;
+    height: 100px;
+}
+.container{
+    border: 2px solid;
+    height: 600px;
+    width: 85%;
+    position: relative;
+    left: 4%;
+    padding: 30px;
+    background: url(./images/ring.jpg);    
+    background-repeat:repeat-x;
+    opacity: 60%;
+    margin: 20px;
+}
+.container .nav ul li{
+    display: inline;
+    padding: 20px;
+}
+.container .nav ul{
+    text-align: center;
+    font-size: 23px;
+}
+.container .nav ul li a{
+    text-decoration: none;
+    -webkit-text-fill-color: beige;
+    transition: color 0.3s ease-in-out;
+}
+.container .nav ul li a:hover{
+    -webkit-text-fill-color: yellow;
+}
+.container .nav img{
+    width: 3%;
+    justify-content: center;
+    vertical-align: top;
+}
+.container .ringSec{
+    display: flex;
+}
+.container .ringSec .ring{
+    width: 50%;
+    border: 2px;
+}
+.ring{
+    margin: 30px;
+    padding: 20px;
+}
+.ring img{
+    height: 400px;
+    width: 75%;
+    justify-content: center;
+}
+.ring h1,h3,p{
+    -webkit-text-fill-color: white;
+}
+.ring h1{
+    font-size: 70px;
+}
+.ring h3{
+    font-size: 40px;
+}
+.ring p{
+    font-size: 30px;
+}
+.ring button{
+    border-radius: 40px;
+    height: 50px;
+    width: 150px;
+    cursor: pointer;
+    background: transparent;
+    color: white;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+}
+.ring button a{
+    text-decoration: none;
+    color: black;
+}
+.ring button:hover{
+    transition-delay: 0.1s;
+    background: white;
+    color: black;
+    -webkit-text-fill-color: black;
+    box-shadow: 0 0 100px white,
+    0 0 400px white,
+    0 0 800px white;
+}
+.neckContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.5;
+}
+.neckContainer .necklace{
+    width: 40%;
+    background: url(./images/necklace.jpg);
+    height: 600px;
+    width: 400px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px;
+}
+.neckContainer .amet{
+    width: 60%;
+    background: url(./images/earrings.jpeg);
+    height: 600px;
+    width: 900px;
+    background-size: cover;
+    right: -10%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 25px;
+    margin: 30px;
+}
+.necklace h1,p{
+    -webkit-text-fill-color: white;
+}
+.necklace button{
+    display: flex;
+    align-items: center;
+    padding: 20px 20px;
+    color: white;
+    background-color: white;
+    height: 10px;
+    border-radius: 30px;
+    /* opacity: 0.8; */
+    cursor: pointer;
+    background: transparent;
+}
+.necklace button:hover{
+    transition-delay: 0.1s;
+    background: white;
+    color: black;
+    box-shadow: 0 0 10px white,
+    0 0 40px white,
+    0 0 80px white;
+}
+.amet button{
+    border-radius: 30px;
+    padding: 20px 20px;
+    height: 10px;
+    /* opacity: 0.8; */
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+    color: white    ;
+    background: transparent;
+}
+.amet button:hover{
+    transition-delay: 0.1s;
+    background: white;
+    color: black;
+    box-shadow: 0 0 10px white,
+    0 0 40px white,
+    0 0 80px white;
+}
+.forHim{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    position: relative;
+}
+.forHim .him1{
+    width: 38%;
+    margin: 15px;
+    background: url(./images/him-neck.jpeg);
+    height: 700px;
+    align-items: center;
+    align-content: center;
+    font-size: 30px;
+}
+.forHim .him1 h3{
+    font-size: 25px;
+}
+.forHim .him2{
+    width: 50%;
+    margin: 15px;
+    background: url(./images/forhim2.jpeg);
+    height: 700px;
+    align-items: center;
+    align-content:end;
+}
+.forHim .him2 h1,h2{
+    margin: 20px;
+    padding: 0px;
+}
+.forHim .him1 button{
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    margin: 20px;
+    height: 50px;
+    width: 150px;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+.forHim button:hover{
+    transition-delay: 0.1s;
+    background: white;
+    color: black;
+    box-shadow: 0 0 10px white,
+    0 0 40px white,
+    0 0 80px white;
+
+}
+.forHim .him2 button{
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    margin: 20px;
+    height: 50px;
+    width: 150px;
+    background: transparent;
+    color: white;
+    background-size: 200% 200%;
+    cursor: pointer;
+    font-size: 20px;
+    overflow: hidden;
+    transition: color 0.3s ease;
+    overflow: hidden;
+}
+.forHim .him2 button:hover{
+    transition-delay: 0.1s;
+    background: white;
+    color: black;
+    box-shadow: 0 0 10px white,
+    0 0 40px white,
+    0 0 80px white;
+}
+.membership{
+    background-color: #FAD02E;
+    left: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+    opacity: 0.8;
+    position: relative;
+    margin-bottom: 20px;
+}
+.membership h1{
+    font-size: 45px;
+}
+.membership button{
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    margin: 20px;
+    height: 50px;
+    width: 150px;
+    background: transparent;
+    color: black;
+  background-size: 200% 200%;
+    cursor: pointer;
+    font-size: 20px;
+    overflow: hidden;
+    transition: color 0.3s ease;
+    overflow: hidden;
+}
+.membership button:hover{
+    transition-delay: 0.1s;
+    background: white;
+    color: black;
+    box-shadow: 0 0 10px white,
+    0 0 40px white,
+    0 0 80px white;
+}
+footer{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    height: 100px;
+    border: 2px solid black;
+    align-items: center;
+    background-color: black;
+}
+.box{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+    scroll-behavior: smooth;
+}
+.box .logo{
+    margin-top: -50px;
+    width: 85%;
+}
+.box .navi{
+    border: 1px solid #1A1A1A;
+    width: 85%;
+    background-color: #1A1A1A;
+    opacity: 0.9;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+
+}
+.box .navi ul li {
+    display: inline;
+    padding-top: 0px;
+    text-decoration: none;
+    opacity: 0.8;
+    height: 20px;
+    justify-content: center;
+   
+}
+.box .navi ul li a{
+    text-decoration: none;
+    font-size: 30px;
+    margin: 30px;
+    padding: 10px;
+    border-radius: 50px;
+    background: transparent;
+    color: whitesmoke;
+}
+.box .navi ul li a:hover{
+    background-color: whitesmoke;
+    color: gold;
+}
+#First{
+    border: 2px solid black;
+    height: 600px;
+    width: 85%;
+    display: flex;
+    background: url(/images/about-1.webp);
+    opacity: 0.8;
+}
+#First .inner1{
+    width: 50%;
+}
+#First .inner2{
+    width: 50%;
+    color: white;
+    font-size: 25px;
+    align-self: center;
+}
+.inner2 h1{
+    color: gold;
+}
+.inner2 h2{
+    border: 2px solid gold;
+    width: 20%;
+}
+#history{
+    width: 85%;
+    color: white;
+    height: 600px;
+    background: url(/images/history.jpeg);
+    background-size: 1100px;
+}
+#history h3,h1,p{
+    padding-left: 100px;
+}
+#history h3{
+    font-size: 40px;
+}
+#history h1{
+    font-size: 50px;
+}
+#history p{
+    font-size: 30px;
+}
+#history p span{
+    color: gold;
+    -webkit-text-fill-color: rgb(9, 47, 236);
+}
+#partners{
+    background-color: #1A1A1A;
+    width: 85%;
+}
+#partners h2{
+    text-align: center;
+    color: white;
+    padding-top: 20px;
+    font-size: 50px;
+}
+#partners img{
+    height: 190px;
+    padding: 20px;
+    align-content: center;
+    justify-content: center;
+    margin-left: 5px;
+    border-radius: 25px;
+    transition: transform 0.5s ease;
+}
+#partners img:hover{
+    transform: scale(1.2);
+}
+#membership{
+    background-color: gold;
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#membership button{
+    height:40px;
+    width: 100px;
+    justify-content: center;
+    border-radius: 30px;
+    background: transparent;
+}
+#membership button:hover{
+    background-color: blue;
+    color: white;
+    transform: scale(1.2);
+}
+#philoshopy{
+    display: flex;
+    width: 85%;
+    background: #1A1A1A;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+#philoshopy .left{
+    color: white;
+    text-align: left;
+    margin: 10px;
+}
+#philoshopy .left h2{
+    text-align: center;
+    font-size: 50px;
+}
+#philoshopy h1,p{
+    text-align: center;
+    padding: 20px;
+}
+#philoshopy .right{
+    margin: 70px;
+    padding: 0px;
+}
+.store{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 50px;
+    scroll-behavior: smooth;
+    background: #1A1A1A;
+    opacity: 0.8;
+    flex-wrap: wrap;
+    width: 95%;
+    border-radius: 25px;
+}
+.store .navi{
+    border: 1px solid wheat;
+    width: 95%;
+    margin: 45px;
+    border-radius: 25px;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
+.store .navi ul li {
+    display: inline;
+    padding-top: 0px;
+    text-decoration: none;
+    opacity: 0.8;
+    height: 20px;
+    justify-content: center;
+   
+}
+.store .navi ul li a{
+    text-decoration: none;
+    font-size: 30px;
+    margin: 30px;
+    padding: 10px;
+    border-radius: 50px;
+    background: transparent;
+    color: whitesmoke;
+}
+.store .navi ul li a:hover{
+    background-color: whitesmoke;
+    color: gold;
+}
+.store .navi img{
+    width: 3%;
+    justify-content: center;
+    vertical-align: top;
+}
+.product-card {
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background: skyblue;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    transition: transform 0.5s ease;
+}
+.product-card:hover{
+    transform: scale(1.1);
+
+}
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: url('magnifier-icon.jpeg'), zoom-in;
+    transition: transform 0.3s ease-in-out;
+    cursor: zoom-in;
+}
+.image-container img .zoomed {
+    transform: scale(1.8);
+    cursor: zoom-out;
+}
+.label {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: red;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+.info {
+    padding: 15px;
+    align-content: center;
+    text-align: -webkit-center;;
+}
+.info h3 {
+    margin: 0 0 10px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    -webkit-text-fill-color: black;
+}
+.price {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    -webkit-text-fill-color: black;
+}
+.discounted-price {
+    color: green;
+    font-size: 20px;
+    font-weight: bold;
+    -webkit-text-fill-color: black;
+    text-align: center;
+}
+.original-price {
+    text-decoration: line-through;
+    color: #888;
+    font-size: 20px;
+    text-align: center;
+}
+.info button{
+    background-color: gold;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    height: 40px;
+    width: 170px;
+    border-radius: 25px;
+}
+.info button:hover{
+    transition-delay: 0.1s;
+    background: white;
+    color: black;
+    box-shadow: 0 0 10px white,
+    0 0 40px white,
+    0 0 80px white;
+    transform: scale(1.1);
+    cursor: pointer;
+}
