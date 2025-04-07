@@ -100,7 +100,6 @@
     }
     .remove-btn{
         display: inline;
-        background-color: goldenrod;  
         color: white;                
         border: none;
         border-radius: 5px;           
@@ -276,7 +275,6 @@
 }
 
 button {
-    background: #28a745;
     color: white;
     font-size: 16px;
     font-weight: bold;
@@ -287,11 +285,28 @@ button {
     margin: 10px;
 }
 
-button:hover {
-    background: #218838;
+.cart-table {
+    table-layout: fixed; /* Prevent resizing */
+    width: 100%;
+    border-collapse: collapse;
 }
-
-
+.cart-table td,
+.cart-table th {
+    padding: 10px;
+    text-align: left;
+    vertical-align: middle;
+}
+.remove-btn {
+    border: none;
+    padding: 8px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: transform 0.2s ease;
+}
+.remove-btn:hover {
+    transform: scale(1.1);
+}
 </style>
 <body>
     <div class="header">
@@ -348,27 +363,18 @@ button:hover {
 </form>
 </body>
 <script>
-  // Select button and popup
   const clickToPayButton = document.getElementById('pay');
   const popupForm = document.querySelector('.popup');
-
-  // Initially hide the popup
   popupForm.style.display = 'none';
-
-  // Add click event listener to the button
   clickToPayButton.addEventListener('click', (e) => {
-    e.preventDefault(); // Prevent default anchor behavior
-    popupForm.style.display = 'flex'; // Show the popup
+    e.preventDefault(); 
+    popupForm.style.display = 'flex'; 
   });
-
-  // Optional: Close popup when clicking outside of it
   document.addEventListener('click', (event) => {
     if (popupForm.style.display === 'flex' && !popupForm.contains(event.target) && event.target !== clickToPayButton) {
-      popupForm.style.display = 'none'; // Hide the popup
+      popupForm.style.display = 'none'; 
     }
   });
-
-// Get elements
 const popup = document.getElementById('popup');
 const clickToPay = document.getElementById('pay');
 

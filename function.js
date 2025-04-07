@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <tr>
                 <th>Item Name</th>
                 <th>Price</th>
-                <th>Decrease</th>
+                <th></th>
             </tr>
         </thead>
         <tbody></tbody>
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
         row.innerHTML = `
             <td>${item.name}</td>
             <td>₹${item.price.toFixed(2)}</td>
-            <td><button class="remove-btn" data-index="${index}">Remove</button></td>
+            <td><button class="remove-btn" data-index="${index}">🗑️</button></td>
         `;
         tbody.appendChild(row);
     });
