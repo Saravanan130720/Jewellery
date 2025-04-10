@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Welcome, <span id="usernameDisplay"></span></h2>
+<p><strong>Email:</strong> <span id="emailDisplay"></span></p>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+  const name = localStorage.getItem("username");
+  const email = localStorage.getItem("email");
+
+  if (!name || !email) {
+    window.location.href = "login.html"; // redirect if not logged in
+  } else {
+    document.getElementById("usernameDisplay").textContent = name;
+    document.getElementById("emailDisplay").textContent = email;
+  }
+
+  document.querySelector(".logout-btn").addEventListener("click", () => {
+    localStorage.clear();
+    alert("Logged out!");
+    window.location.href = "login.html";
+  });
+});
+
+</script>
+</html>

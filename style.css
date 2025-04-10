@@ -11,7 +11,7 @@ body{
     display: grid;
     background-repeat:round;
     flex-wrap: wrap;
-    
+    font-family:  sans-serif;
 }
 .logo img{
     margin: 20px;
@@ -25,6 +25,22 @@ body{
     background-color: chartreuse;
     height: 100px;
 }
+@media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .nav, .box .nav {
+      flex-direction: column;
+      gap: 10px;
+      padding-top: 10px;
+    }
+  
+    .product-card {
+      grid-template-columns: 1fr;
+    }
+  }
 .container{
     border: 2px solid;
     height: 600px;
@@ -39,19 +55,35 @@ body{
 }
 .container .nav ul li{
     display: inline;
-    padding: 20px;
+    /* padding: 5px;
+    margin: 10px; */
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 30px;
 }
 .container .nav ul{
     text-align: center;
     font-size: 23px;
+    margin: 5px;
+    border: 2px solid goldenrod;
+    padding: 25px;
+    border-radius: 50px;
+    background-color: #000;
+}
+.container .nav ul li:hover{
+    color: black
 }
 .container .nav ul li a{
     text-decoration: none;
     -webkit-text-fill-color: beige;
     transition: color 0.3s ease-in-out;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 .container .nav ul li a:hover{
-    -webkit-text-fill-color: yellow;
+    color: black;
 }
 .container .nav img{
     width: 3%;
@@ -85,31 +117,6 @@ body{
 }
 .ring p{
     font-size: 30px;
-}
-.ring button{
-    border-radius: 40px;
-    height: 50px;
-    width: 150px;
-    cursor: pointer;
-    background: transparent;
-    color: white;
-    text-decoration: none;
-    font-family: sans-serif;
-    font-size: 20px;
-    text-decoration: none;
-}
-.ring button a{
-    text-decoration: none;
-    color: black;
-}
-.ring button:hover{
-    transition-delay: 0.1s;
-    background: white;
-    color: black;
-    -webkit-text-fill-color: black;
-    box-shadow: 0 0 100px white,
-    0 0 400px white,
-    0 0 800px white;
 }
 .neckContainer{
     display: flex;
@@ -145,45 +152,6 @@ body{
 .necklace h1,p{
     -webkit-text-fill-color: white;
 }
-.necklace button{
-    display: flex;
-    align-items: center;
-    padding: 20px 20px;
-    color: white;
-    background-color: white;
-    height: 10px;
-    border-radius: 30px;
-    /* opacity: 0.8; */
-    cursor: pointer;
-    background: transparent;
-}
-.necklace button:hover{
-    transition-delay: 0.1s;
-    background: white;
-    color: black;
-    box-shadow: 0 0 10px white,
-    0 0 40px white,
-    0 0 80px white;
-}
-.amet button{
-    border-radius: 30px;
-    padding: 20px 20px;
-    height: 10px;
-    /* opacity: 0.8; */
-    align-items: center;
-    display: flex;
-    cursor: pointer;
-    color: white    ;
-    background: transparent;
-}
-.amet button:hover{
-    transition-delay: 0.1s;
-    background: white;
-    color: black;
-    box-shadow: 0 0 10px white,
-    0 0 40px white,
-    0 0 80px white;
-}
 .forHim{
     color: white;
     display: flex;
@@ -217,52 +185,6 @@ body{
 .forHim .him2 h1,h2{
     margin: 20px;
     padding: 0px;
-}
-.forHim .him1 button{
-    align-items: center;
-    justify-content: center;
-    border-radius: 30px;
-    margin: 20px;
-    height: 50px;
-    width: 150px;
-    background: transparent;
-    color: white;
-    cursor: pointer;
-    font-size: 20px;
-    transition: color 0.3s ease;
-}
-.forHim button:hover{
-    transition-delay: 0.1s;
-    background: white;
-    color: black;
-    box-shadow: 0 0 10px white,
-    0 0 40px white,
-    0 0 80px white;
-
-}
-.forHim .him2 button{
-    align-items: center;
-    justify-content: center;
-    border-radius: 30px;
-    margin: 20px;
-    height: 50px;
-    width: 150px;
-    background: transparent;
-    color: white;
-    background-size: 200% 200%;
-    cursor: pointer;
-    font-size: 20px;
-    overflow: hidden;
-    transition: color 0.3s ease;
-    overflow: hidden;
-}
-.forHim .him2 button:hover{
-    transition-delay: 0.1s;
-    background: white;
-    color: black;
-    box-shadow: 0 0 10px white,
-    0 0 40px white,
-    0 0 80px white;
 }
 .membership{
     background-color: #FAD02E;
@@ -346,14 +268,10 @@ footer{
     text-decoration: none;
     font-size: 30px;
     margin: 30px;
-    padding: 10px;
+    padding: 5px;
     border-radius: 50px;
     background: transparent;
     color: whitesmoke;
-}
-.box .navi ul li a:hover{
-    background-color: whitesmoke;
-    color: gold;
 }
 #First{
     border: 2px solid black;
@@ -385,6 +303,10 @@ footer{
     height: 600px;
     background: url(/images/history.jpeg);
     background-size: 1100px;
+}
+.history{
+    display: flex;
+    flex-direction: row;
 }
 #history h3,h1,p{
     padding-left: 100px;
@@ -478,6 +400,7 @@ footer{
     flex-wrap: wrap;
     width: 95%;
     border-radius: 25px;
+    overflow-x: hidden;
 }
 .store .navi{
     border: 1px solid wheat;
@@ -487,6 +410,7 @@ footer{
     justify-content: center;
     align-items: center;
     align-self: center;
+    overflow-x: hidden;
 }
 .store .navi ul li {
     display: inline;

@@ -24,6 +24,7 @@
         background: url(/images/bg.jpg);
         background-repeat: no-repeat;
         background-size: cover;
+        overflow-x: hidden;
     }
     .header{
         height: 80px;
@@ -93,10 +94,12 @@
     }
     .foot{
         display: flex;
-        justify-content: space-around;
         margin: 20px 0px;
         padding: 10px 0px;
         border-top: 1px solid #333;
+    }
+    .foot #total{
+        margin-left: 400px;
     }
     .remove-btn{
         display: inline;
@@ -263,9 +266,8 @@
     text-align: center;
     padding: 20px;
     border: 2px solid black;
-    display: none; /* Initially hidden */
+    display: none; 
 }
-
 .popup input, .popup textarea {
     width: 90%;
     padding: 10px;
@@ -318,7 +320,7 @@ button {
             <div class="head"><p>MyCart</p></div>
             <div id="cartItem">Your Cart is Empty</div>
             <div class="foot">
-                <h3>Total</h3>
+                <!-- <h3>Total</h3> -->
                 <h2 id="total">₹ 0.00</h2>
             </div>
         </div>

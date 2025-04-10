@@ -8,9 +8,11 @@ document.addEventListener("DOMContentLoaded", () => {
             const productCard = e.target.closest(".product-card");
             const productName = productCard.querySelector("h3").textContent;
             const discountedPrice = productCard.querySelector(".discounted-price").textContent;
+            const productImg = productCard.querySelector("img").getAttribute("src");
             const item = {
                 name: productName,
-                price: parseFloat(discountedPrice.replace("₹", ""))
+                price: parseFloat(discountedPrice.replace("₹", "")),
+                img: productImg
             };
             cart.push(item);
             localStorage.setItem("cart", JSON.stringify(cart));
@@ -38,8 +40,9 @@ document.addEventListener("DOMContentLoaded", () => {
     table.innerHTML = `
         <thead>
             <tr>
-                <th>Item Name</th>
-                <th>Price</th>
+                <th><th>
+                <th></th>
+                <th></th>
                 <th></th>
             </tr>
         </thead>
@@ -49,6 +52,9 @@ document.addEventListener("DOMContentLoaded", () => {
     cart.forEach((item, index) => {
         const row = document.createElement("tr");
         row.innerHTML = `
+            <td>
+        <img src="${item.img}" alt="${item.name}" style="width: 60px; height: 60px; object-fit: cover; vertical-align: middle; border-radius: 5px; margin-right: 10px;">
+    </td>
             <td>${item.name}</td>
             <td>₹${item.price.toFixed(2)}</td>
             <td><button class="remove-btn" data-index="${index}">🗑️</button></td>
