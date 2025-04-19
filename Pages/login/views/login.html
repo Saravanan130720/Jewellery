@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://kit.fontawesome.com/92d70a2fd8.js" crossorigin="anonymous"></script>
+  <title>Document</title>
+</head>
+<body>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create New Account</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('/images/background-login.jpeg');
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .form-container {
+      background-color: rgba(28, 28, 37, 0.95);
+      color: white;
+      padding: 30px;
+      border-radius: 20px;
+      max-width: 600px;
+      width: 90%;
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    }
+
+    .form-container h1 {
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .form-container a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .form-container a:hover {
+      text-decoration: underline;
+    }
+
+    .input-group {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .input-group input {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .input-full {
+      width: 100%;
+    }
+
+    .button-group {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .button-group button {
+      flex: 1;
+      padding: 10px;
+      background-color: #ffffff;
+      color: #000000;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .button-group button:hover {
+      background-color: #dddddd;
+    }
+
+    /* Responsive Layout for Mobile */
+    @media (max-width: 600px) {
+      .input-group {
+        flex-direction: column;
+      }
+
+      .button-group {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <form action="/Sign_up" method="POST">
+  <div class="form-container">
+    <a href="#">Sign in</a>
+    <p><strong>START FOR FREE</strong></p>
+    <h1>Create new account.</h1>
+    <p>Already a Member? <a href="/Pages/login/views/userLogin.html">Log in</a></p>
+
+    <div class="input-group">
+      <input type="text" name="name" placeholder="Name">
+    </div>
+    <div class="input-group">
+      <input type="email" name="email" placeholder="Email">
+      <input type="phonenumber" name="phonenumber" placeholder="Phone Number">
+      <input type="password" name="password" placeholder="Password">
+    </div>
+
+    <div class="button-group">
+      <button>Create account</button>
+    </div>
+  </div>
+  </form>
+  </body>
+</html>
+</body>
+</html>

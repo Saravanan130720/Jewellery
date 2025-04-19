@@ -22,74 +22,73 @@ body{
     padding: 5px;
 }
 .logo img:hover{
-    background-color: chartreuse;
     height: 100px;
 }
-@media (max-width: 768px) {
-    header {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .nav, .box .nav {
-      flex-direction: column;
-      gap: 10px;
-      padding-top: 10px;
-    }
-  
-    .product-card {
-      grid-template-columns: 1fr;
-    }
-  }
 .container{
     border: 2px solid;
     height: 600px;
     width: 85%;
+    overflow: hidden;
     position: relative;
     left: 4%;
-    padding: 30px;
+    padding: 0px 10px;
     background: url(./images/ring.jpg);    
     background-repeat:repeat-x;
     opacity: 60%;
     margin: 20px;
 }
-.container .nav ul li{
-    display: inline;
-    /* padding: 5px;
-    margin: 10px; */
-    margin-left: 10px;
-    margin-right: 10px;
-    padding-left: 25px;
-    padding-right: 25px;
-    font-size: 30px;
+.nav{
+    width: 88%;
+    margin-left: 65px;
 }
-.container .nav ul{
+.nav ul li{
+    display: inline;
+    width: 85%;
+    font-size: 30px;
+    margin: 10px 0;
+}
+.nav ul{
     text-align: center;
-    font-size: 23px;
-    margin: 5px;
     border: 2px solid goldenrod;
-    padding: 25px;
     border-radius: 50px;
     background-color: #000;
+    display: flex;
+    padding: 15px;
 }
-.container .nav ul li:hover{
-    color: black
-}
-.container .nav ul li a{
+.nav ul li a{
     text-decoration: none;
     -webkit-text-fill-color: beige;
-    transition: color 0.3s ease-in-out;
-    padding-left: 20px;
-    padding-right: 20px;
 }
-.container .nav ul li a:hover{
-    color: black;
-}
-.container .nav img{
-    width: 3%;
-    justify-content: center;
-    vertical-align: top;
-}
+@media screen and (max-width: 900px) {
+    body{
+        grid-template-columns: 1fr;
+    }
+    .forHim .him1{
+        width: 85%;
+    }
+    .product-card {
+      grid-template-columns: 1fr;
+    }
+  }
+@media screen and (max-width: 600px) {
+    body{
+        grid-template-columns: 1fr;
+    }
+    .forHim .him1{
+        width: 85%;
+    }
+    .product-card {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media screen and (max-width: 300px) {
+    body{
+        grid-template-columns: 0.5fr;
+    }
+    .product-card {
+      grid-template-columns: 0.5fr;
+    }
+  }
 .container .ringSec{
     display: flex;
 }
@@ -102,12 +101,20 @@ body{
     padding: 20px;
 }
 .ring img{
-    height: 400px;
-    width: 75%;
-    justify-content: center;
+    display: flex;
+  align-items: center;       
+  justify-content: center;   
+  text-align: center;       
+  height: 100%;           
+  width: 100%;              
+  flex-direction: column;    
+  color: white;              
+  padding: 1rem;           
+  box-sizing: border-box;
 }
 .ring h1,h3,p{
     -webkit-text-fill-color: white;
+    
 }
 .ring h1{
     font-size: 70px;
@@ -123,12 +130,14 @@ body{
     justify-content: center;
     align-items: center;
     opacity: 0.5;
+    width: 100%;
+  overflow-x: hidden;
+  padding: 0 10px
 }
 .neckContainer .necklace{
-    width: 40%;
     background: url(./images/necklace.jpg);
     height: 600px;
-    width: 400px;
+    width: 600px;
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -243,40 +252,17 @@ footer{
     scroll-behavior: smooth;
 }
 .box .logo{
-    margin-top: -50px;
+    margin-top: -50px; 
     width: 85%;
 }
 .box .navi{
-    border: 1px solid #1A1A1A;
-    width: 85%;
-    background-color: #1A1A1A;
-    opacity: 0.9;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-
-}
-.box .navi ul li {
-    display: inline;
-    padding-top: 0px;
-    text-decoration: none;
-    opacity: 0.8;
-    height: 20px;
-    justify-content: center;
-   
-}
-.box .navi ul li a{
-    text-decoration: none;
-    font-size: 30px;
-    margin: 30px;
-    padding: 5px;
-    border-radius: 50px;
-    background: transparent;
-    color: whitesmoke;
+    width: 95%;
+    margin-left: -10px;
 }
 #First{
     border: 2px solid black;
     height: 600px;
-    width: 85%;
+    width: 95%;
     display: flex;
     background: url(/images/about-1.webp);
     opacity: 0.8;
@@ -298,7 +284,7 @@ footer{
     width: 20%;
 }
 #history{
-    width: 85%;
+    width: 95%;
     color: white;
     height: 600px;
     background: url(/images/history.jpeg);
@@ -326,7 +312,7 @@ footer{
 }
 #partners{
     background-color: #1A1A1A;
-    width: 85%;
+    width: 95%;
 }
 #partners h2{
     text-align: center;
@@ -348,7 +334,7 @@ footer{
 }
 #membership{
     background-color: gold;
-    width: 85%;
+    width: 95%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -367,7 +353,7 @@ footer{
 }
 #philoshopy{
     display: flex;
-    width: 85%;
+    width: 95%;
     background: #1A1A1A;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
@@ -400,44 +386,28 @@ footer{
     flex-wrap: wrap;
     width: 95%;
     border-radius: 25px;
-    overflow-x: hidden;
 }
-.store .navi{
-    border: 1px solid wheat;
-    width: 95%;
-    margin: 45px;
-    border-radius: 25px;
-    justify-content: center;
-    align-items: center;
-    align-self: center;
-    overflow-x: hidden;
+.navi{
+    width: 93%;
+    margin-left: 65px;
 }
-.store .navi ul li {
+.navi ul li{
     display: inline;
-    padding-top: 0px;
-    text-decoration: none;
-    opacity: 0.8;
-    height: 20px;
-    justify-content: center;
-   
-}
-.store .navi ul li a{
-    text-decoration: none;
+    width: 85%;
     font-size: 30px;
-    margin: 30px;
-    padding: 10px;
+    margin: 10px 0;
+}
+.navi ul{
+    text-align: center;
+    border: 2px solid goldenrod;
     border-radius: 50px;
-    background: transparent;
-    color: whitesmoke;
+    background-color: #000;
+    display: flex;
+    padding: 15px;
 }
-.store .navi ul li a:hover{
-    background-color: whitesmoke;
-    color: gold;
-}
-.store .navi img{
-    width: 3%;
-    justify-content: center;
-    vertical-align: top;
+.navi ul li a{
+    text-decoration: none;
+    -webkit-text-fill-color: beige;
 }
 .product-card {
     width: 300px;

@@ -9,22 +9,121 @@
     <script src="https://kit.fontawesome.com/92d70a2fd8.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/png" href="./images/logo.png">
 </head>
+<style>
+
+/* Tablet View (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+  .container {
+    padding: 10px;
+  }
+
+  .nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .ringSec {
+    width: 85%;
+    flex-direction: column;
+    text-align: center;
+    font: 2px;
+  }
+
+  .neckContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .forHim {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .membership {
+    text-align: center;
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .ringSec,
+  .neckContainer,
+  .forHim {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .ringSec img,
+  .neckContainer img {
+    max-width: 50%;
+    height: auto;
+  }
+
+  .ring, .necklace, .amet, .him1, .him2 {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .container {
+    padding: 0 10px;
+  }
+
+  .membership h1, .membership h2 {
+    font-size: 18px;
+  }
+
+  .membership button {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  footer {
+    text-align: center;
+    font-size: 14px;
+  }
+}
+
+/* Very Small Devices (max-width: 480px) */
+@media screen and (max-width: 480px) {
+  .ringSec h1, .neckContainer h1, .forHim h1 {
+    font-size: 20px;
+  }
+
+  .ringSec h3, .forHim h3, .neckContainer p {
+    font-size: 16px;
+  }
+
+  .membership button {
+    width: 100%;
+  }
+}
+</style>
 <body>
  
     <div class="logo">
         <a href="/index.html"><img src="./images/logo.png" alt="logo"></a>
     </div>
+    <div class="nav">
+        <ul>
+            <li id="home"><a href="/index.html">Home</a></li>
+            <li><a href="./Pages/aboutUs.html">AboutUs</a></li>
+            <li><a href="./Pages/Store.html">Store</a></li>
+            <li><a href="/Pages/contactUs.html">Contact Us</a></li>
+            <li><a href="./Pages/cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            <li><a href="/Pages/login/views/login.html"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+        </ul>
+    </div>
     <div class="container">
-        <div class="nav">
-            <ul>
-                <li id="home"><a href="/index.html">Home</a></li>
-                <li><a href="./Pages/aboutUs.html">AboutUs</a></li>
-                <li><a href="./Pages/Store.html">Store</a></li>
-                <li><a href="/Pages/contactUs.html">Contact Us</a></li>
-                <li><a href="./Pages/cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
-                <li><a href="/Pages/login.html"><i class="fa fa-user" aria-hidden="true"></i></a></li>
-            </ul>
-        </div>
+        
         <div class="ringSec">
             <div class="ring"></div>
             <div class="ring">
